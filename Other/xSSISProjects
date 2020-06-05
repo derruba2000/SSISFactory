@@ -1,0 +1,66 @@
+{
+	"SSISProject":{
+		"Name" : "Project Name",
+		"Description" : "Project description",
+		"Path": "c:\\Temp",
+		"Parameters":[
+			{
+				"Name":"parName1",
+				"DataType":"String",
+				"Value":"Value1",
+				"Sensitive":"Y",
+				"Required":"Y",
+				"Description":"par Description 1"
+			},
+			{
+				"Name":"parName2",
+				"DataType":"String",
+				"Value":"Value2",
+				"Sensitive":"Y",
+				"Required":"Y",
+				"Description":"par Description 2"
+			}
+		
+		],
+		"Connections":[
+			{
+				"Name":"Connection 1",
+				"Value":"Value Connection 1",
+				"Type":"Type Connection 1"
+			}
+		],
+		"Packages":[
+			{
+				"Name": "Package 1",
+				"Description": "Package Description 1",
+				"Pattern":{
+					"Type":"Master Parallel",
+					"SubPackages":[
+						{ "SubPackage": "Package 1.A" },
+						{ "SubPackage": "Package 1.B" }
+					]
+				}
+			},
+			{
+				"Name": "Package 2",
+				"Description": "Package Description 2",
+				"Pattern":{
+					"Type":"Master Serial",
+					"SubPackages":[
+						{ "SubPackage": "Package 1.A" },
+						{ "SubPackage": "Package 1.B" }
+					]
+				}
+			},
+			{
+				"Name": "Package 1.A",
+				"Description": "Package Description 1.A"
+			},
+			{
+				"Name": "Package 1.B",
+				"Description": "Package Description 1.B"
+			}
+			
+		]
+	}
+}
