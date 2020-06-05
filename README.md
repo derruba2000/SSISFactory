@@ -1,0 +1,2 @@
+# SSISFactory
+SSIS Patterns factory
